@@ -941,15 +941,34 @@ footer .social_item:hover {
 
 
 /*Media---------------------------*/
-@media (max-width: 1441px) {
+@media (max-width: 1775px) {
     .header {
         background-size: auto 80%;
+    }
+
+}
+@media (max-width: 1439px) {
+    .header {
+        background-size: auto 70%;
     }
     .screen2_inner {
         padding: 80px 130px 100px;
     }
 
 }
+@media (max-width: 1273px) {
+    .header {
+        background-size: auto 53%;
+    }
+    
+    .intro {
+        background-size: 20%;
+    }
+    .intro_inner {
+    margin-top: 100px;
+    }
+}
+
 @media (max-width: 1025px) {
     
     .header_logo {
@@ -958,7 +977,7 @@ footer .social_item:hover {
     }
     
     .header {
-        background-size: 40%;
+        background-size: auto 60%;
         height: 100vh;
     }
     
