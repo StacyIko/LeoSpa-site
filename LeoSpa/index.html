@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeoSpa</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">-->
+    
+</head>
+
+<body>
+   
+<!--Sprite-->
+<svg style="display: none;">
+   <symbol id="facebook" viewBox="0 0 430.113 430.114">
+       <g>
+            <path id="Facebook" d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
+                c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
+                c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z"/>
+</g>
+   </symbol>
+   
+   <symbol id="twitter" viewBox="0 0 449.956 449.956">
+       <g>
+        <path d="M449.956,85.657c-17.702,7.614-35.408,12.369-53.102,14.279c19.985-11.991,33.503-28.931,40.546-50.819
+            c-18.281,10.847-37.787,18.268-58.532,22.267c-18.274-19.414-40.73-29.125-67.383-29.125c-25.502,0-47.246,8.992-65.24,26.98
+            c-17.984,17.987-26.977,39.731-26.977,65.235c0,6.851,0.76,13.896,2.284,21.128c-37.688-1.903-73.042-11.372-106.068-28.407
+            C82.46,110.158,54.433,87.46,31.403,59.101c-8.375,14.272-12.564,29.787-12.564,46.536c0,15.798,3.711,30.456,11.138,43.97
+            c7.422,13.512,17.417,24.455,29.98,32.831c-14.849-0.572-28.743-4.475-41.684-11.708v1.142c0,22.271,6.995,41.824,20.983,58.674
+            c13.99,16.848,31.645,27.453,52.961,31.833c-7.995,2.091-16.086,3.138-24.269,3.138c-5.33,0-11.136-0.475-17.416-1.42
+            c5.9,18.459,16.75,33.633,32.546,45.535c15.799,11.896,33.691,18.028,53.677,18.418c-33.498,26.262-71.66,39.393-114.486,39.393
+            c-8.186,0-15.607-0.373-22.27-1.139c42.827,27.596,90.03,41.394,141.612,41.394c32.738,0,63.478-5.181,92.21-15.557
+            c28.746-10.369,53.297-24.267,73.665-41.686c20.362-17.415,37.925-37.448,52.674-60.097c14.75-22.651,25.738-46.298,32.977-70.946
+            c7.23-24.653,10.848-49.344,10.848-74.092c0-5.33-0.096-9.325-0.287-11.991C421.785,120.202,437.202,104.306,449.956,85.657z"/>
+</g>
+   </symbol>
+    
+    <symbol id="google-plus" viewBox="0 0 604.35 604.35">
+       <g>
+		<path d="M516.375,255v-76.5h-51V255h-76.5v51h76.5v76.5h51V306h76.5v-51H516.375z M320.025,341.7l-28.051-20.4
+			c-10.2-7.649-20.399-17.85-20.399-35.7s12.75-33.15,25.5-40.8c33.15-25.5,66.3-53.55,66.3-109.65c0-53.55-33.15-84.15-51-99.45
+			h43.35l30.6-35.7h-158.1c-112.2,0-168.3,71.4-168.3,147.9c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15
+			c0,25.5,10.2,35.7,22.95,51c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35
+			c0,58.65,53.55,114.75,168.3,114.75c137.7,0,204.001-76.5,204.001-150.449C383.775,400.35,355.725,372.3,320.025,341.7z
+			 M126.225,109.65c0-56.1,33.15-81.6,68.85-81.6c66.3,0,102,89.25,102,140.25c0,66.3-53.55,79.05-73.95,79.05
+			C159.375,247.35,126.225,168.3,126.225,109.65z M218.024,568.65c-84.15,0-137.7-38.25-137.7-94.351c0-56.1,51-73.95,66.3-81.6
+			c33.15-10.2,76.5-12.75,84.15-12.75s12.75,0,17.85,0c61.2,43.35,86.7,61.2,86.7,102C335.324,530.4,286.875,568.65,218.024,568.65z
+			" fill="#000"/>
+	</g>
+   </symbol>
+   
+   <symbol id="instagram" viewBox="0 0 512 512">
+       <g>
+           <path d="m75 512h362c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-362c-24.8125 0-45-20.1875-45-45zm0 0"/><path d="m256 391c74.4375 0 135-60.5625 135-135s-60.5625-135-135-135-135 60.5625-135 135 60.5625 135 135 135zm0-240c57.898438 0 105 47.101562 105 105s-47.101562 105-105 105-105-47.101562-105-105 47.101562-105 105-105zm0 0"/><path d="m406 151c24.8125 0 45-20.1875 45-45s-20.1875-45-45-45-45 20.1875-45 45 20.1875 45 45 45zm0-60c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>         
+       </g>
+   </symbol>
+</svg> 
+   
+    <header class="header">
+     <div class="header-top">
+      <div class="container">
+          
+           <div class="header_inner">          
+             
+              <div class="header_logo">
+                  <img class="logo" src="images/logo.png" alt="Leo spa logo"> 
+              </div>
+              <nav class="nav">
+                  <ul class="menu">
+                      <li><a class="popup-demo" href="#">Home</a> 
+                      </li>
+                      <li><a id="js_link" class="popup-demo" href="#popup">About</a></li> 
+                      <li><a id="js_link" class="popup-demo" href="#">Feature</a></li>
+                      <li><a id="js_link" class="popup-demo" href="#">Service</a></li>
+                      <li><a id="js_link" class="popup-demo" href="#">Contact</a></li>
+
+                  </ul>
+              </nav>    
+              <button class="burger">
+                  <div class="burger__item"><span></span></div>
+              </button>  
+            
+            </div>             
+       </div>
+       </div>
+       
+              <nav class="nav--mobile">
+                  <ul class="nav--mobile__menu">
+                      <li><a class="nav--mobile_link popup-demo" href="#">Home</a> 
+                      </li>
+                      <li><a id="js_link" class="nav--mobile_link popup-demo" href="#popup">About</a></li> 
+                      <li><a id="js_link" class="nav--mobile_link popup-demo" href="#">Feature</a></li>
+                      <li><a id="js_link" class="nav--mobile_link popup-demo" href="#">Service</a></li>
+                      <li><a id="js_link" class="nav--mobile_link popup-demo" href="#">Contact</a></li>
+
+                  </ul>
+              </nav>
+              
+              
+        <div class="intro">
+         
+           <div class="container">
+               <div class="intro_inner">
+                   <p class="red_text"> 
+                       spa & beauty center
+                   </p>
+                   <h1 class="intro_title">
+                       Beauty and success<br>
+    starts here.
+                   </h1>
+                   <p class="intro_text">
+                       Together creeping heaven upon third dominion be upon won't darkness rule
+    behold it created good saw after she'd Our set living.
+                   </p>
+                   
+                   <div class="intro_bottom">
+                       <button type="button" class="btn btn_sqr block popup-demo"> 
+                           reserve now  &#10095;
+                       </button>
+
+
+                       <a class="btn_watch" href="https://www.youtube.com/watch?v=lfTuVI9NcOw" target="_blank">
+
+                       </a>
+                       <a class="watch_text" href="https://www.youtube.com/watch?v=lfTuVI9NcOw" target="_blank"> 
+                               Watch our story
+                       </a>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </header>
+    
+    <main>
+       <div class="screen2">
+           <div class="container">
+              <div class="screen2_inner"> 
+                  <img class="butterfly" src="images/butterfly.png" height="71" alt=""> 
+                  <h3 class="screen2_subtitle">
+                      About our spa center
+                  </h3>
+                  <h2>
+                      Come and you will be Inspired!
+                  </h2>
+                  <p class="screen2_text text">
+                      It’s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the sky gets darker and darker
+                  </p>
+                  <a class="btn btn_round popup-demo">Read more</a>
+              </div> 
+           </div>
+       </div>    
+<!--       Screen2-->
+       <div class="service">
+           <div class="service_item">
+               <img src="images/service/1.jpg" alt="" class="service_img">
+               <div class="service_content">
+                    <img class="service_icon" src="images/icons/1.png" alt=""> 
+                    <h3 class="service_title">Body Treatment</h3>
+               </div>
+           </div>
+           <div class="service_item">
+               <img src="images/service/2.jpg" alt="" class="service_img">
+               <div class="service_content">
+                    <img class="service_icon" src="images/icons/1.png" alt="">
+                    <h3 class="service_title">Body Treatment</h3>
+               </div>
+           </div>
+           <div class="service_item">
+               <img src="images/service/3.jpg" alt="" class="service_img">
+               <div class="service_content">
+                    <img class="service_icon" src="images/icons/1.png" alt="">
+                    <h3 class="service_title">Body Treatment</h3>
+               </div>
+           </div>
+           <div class="service_item">
+               <img src="images/service/4.jpg" alt="" class="service_img">
+               <div class="service_content">
+                    <img class="service_icon" src="images/icons/1.png" alt="">
+                    <h3 class="service_title">Body Treatment</h3>
+               </div>
+           </div>
+       </div>    
+<!--       Service-->
+
+       <div class="procedures">
+           <div class="container">
+              <div class="procedures_inner">
+                  <h2>Popular procedures</h2>
+                  <p class="procedures_text">To doesn't his appear replenish together called he of mad place won't wherein blessed second every wherein were meat kind wherein and martcin </p>
+
+                      <div class="procedures_block">
+
+                          <div class="procedures_item">
+                              <img src="images/post/1.jpg" alt="" class="procedures_img">
+                              <h3 class="procedures_title">Massage Therapy</h3>
+                              <p class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p> 
+                              <a class="btn btn_small btn_grey">Read more</a>
+                          </div>
+                          <div class="procedures_item">
+                              <img src="images/post/2.jpg" alt="" class="procedures_img">
+                              <h3 class="procedures_title">Beauty Care</h3>
+                              <p class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
+                              <a class="btn btn_small btn_grey">Read more</a>
+                          </div>
+                          <div class="procedures_item">
+                              <img src="images/post/3.jpg" alt="" class="procedures_img">
+                              <h3 class="procedures_title">Executive Reflexology</h3>
+                              <p class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
+                              <a class="btn btn_small btn_grey">Read more</a>
+                          </div>
+
+                  </div>
+
+
+               </div>
+              </div>
+        </div>    
+<!--        Procedures-->
+
+    <!--    Review-->
+        <div class="reviews">
+            <div class="reviews-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="container reviews_inner">
+                              <div class="review_text">First I attended this salon last week as I have done for many years. I was very impressed with their warm welcome but also their attention to all the necessary precautions. It made for a very pleasant experience. The hair cut and colour were great too.
+                              </div>
+                              <img class="author_photo author_photo--1" src="images/client-1.png" alt="author of the review">
+                              <p class="author">
+                               Mary White,<span>Executive</span>
+                              </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="container reviews_inner">
+                                  <div class="review_text">I had the most incredible experience in Winchester with Caitlin yesterday! She made me look and feel like a princess! Got exactly the results I wanted and more!! 10/10 would recommended to EVERYONE!! The most beautiful balayage I’ve ever had. I felt completely transformed and at ease the whole time. I’ve had so many compliments on the cut and colour! Always the best salon experience in Haringtons Winchester💗
+                                  </div>
+                                  <div class="author_photo author_photo--2"></div> 
+                                  <p class="author">
+                                   Julia Marsh, <span>Doctor</span>
+                                  </p>
+                          </div>
+                    </div>
+                    <div class="swiper-slide">
+                       <div class="container reviews_inner">
+                            <div class="review_text">I have been having my hair permed with Heather for the last 3 years. Heather always listens to the type of curls I want and I love the results. I always get great service at the salon and so many compliments about my hair/curls.
+                            </div>
+                            <div class="author_photo author_photo--3"></div> 
+                            <p class="author">
+                            Kerry Michalowska,
+                            <span>Manager</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <!-- If we need pagination -->
+                    
+
+                    <!-- If we need navigation buttons -->
+<!--                    <div class="swiper-button-prev"></div>-->
+<!--                    <div class="swiper-button-next"></div>-->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need scrollbar -->
+    <!--                <div class="swiper-scrollbar"></div>-->
+            </div>
+             
+        </div>
+
+<!--    Team--------------------------------->
+      <div class="procedures">
+           <div class="container">
+              <div class="procedures_inner">
+                  <h2>Experienced Team</h2>
+                  <div class="procedures_text">To doesn't his appear replenish together called he of mad place won't wherein blessed second every wherein were meat kind wherein and martcin </div>
+
+                      <div class="procedures_block">
+
+                      <div class=" team_item">
+                       <div class="team_photo">             
+                          <img src="images/team/1.jpg" alt="" class="team_img">
+                        </div>
+
+                        <div class="title_wrap">
+                              <h3 class="team_title">Julia Austin</h3>
+                              <p class="team_text">Thai massage</p>
+                              <div class="social">
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#facebook"></use> 
+                                        </svg>
+                                    </a>
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#twitter"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#google-plus"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#instagram"></use> 
+                                        </svg>
+                                    </a>
+
+                              </div> <!--           social-->
+
+
+                        </div>
+                      </div>
+
+                      <div class=" team_item">
+                       <div class="team_photo">                    
+                          <img src="images/team/2.jpg" alt="" class="team_img">
+                        </div>
+
+                        <div class="title_wrap">
+                              <h3 class="team_title">Jessica Hannan</h3>
+                              <div class="team_text">Manager</div>
+                              <div class="social">
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#facebook"></use> 
+                                        </svg>
+                                    </a>
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#twitter"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#google-plus"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#instagram"></use> 
+                                        </svg>
+                                    </a>
+
+                              </div> <!--           social-->
+
+                        </div>
+                      </div>
+
+                      <div class="team_item">
+                       <div class="team_photo">                    
+                          <img src="images/team/3.jpg" alt="" class="team_img">
+                        </div>
+
+                        <div class="title_wrap">
+                              <h3 class="team_title">Cheryl Harris</h3>
+                              <div class="team_text">Сosmetologist</div>
+                              <div class="social">
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#facebook"></use> 
+                                        </svg>
+                                    </a>
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#twitter"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#google-plus"></use> 
+                                        </svg>
+                                    </a>
+
+                                    <a class="social_item" href="#" target="_blank">
+                                        <svg class="social_icon">
+                                            <use xlink:href="#instagram"></use> 
+                                        </svg>
+                                    </a>
+
+                              </div> <!--           social-->
+
+                        </div>
+                      </div>
+
+
+
+                  </div>
+
+
+               </div>
+              </div>
+        </div><!--   Team-->
+
+    <!--   Form-->
+       <div class="form">
+           <div class="container">
+            <div class="form_inner">
+                 <div class="form_img_block">
+                     <img class=form_img src="images/appointment-img.jpg" alt="">
+                 </div>
+                  <div class="form_block">
+                       <form action="#" method="post">
+                         <div class="form_columns">
+                              <div class="form_half_width">
+                                   <input type="text" name="name" placeholder="name">
+                                  
+                                  <div class="select">
+                                    <div class="select__header">
+                                        <div class="select__current">Select Service</div>
+                                        <div class="select__icon">&times;</div>
+                                    </div>
+
+                                    <div class="select__body">
+                                        <div class="select__item">Beauty Care</div>
+                                        <div class="select__item">Massage Therapy</div>
+                                        <div class="select__item">Executive Reflexology</div>
+                                    </div>
+                                </div>
+                                   <input type="date" name="date" >
+                               </div>
+
+
+                               <div class="form_half_width">
+                                   <input type="email" name="email" placeholder="Email address">
+
+                                   <input type="tel" name="phone" placeholder="phone number">
+                                   <input type="time" name="date">
+                               </div>
+                           </div>
+
+                           <textarea class="input_notes" name="notes" placeholder="your notes"></textarea> 
+                           <button class="btn btn_round btn_long" type="submit" >Make an Appointment</button>
+                       </form>
+                   </div>
+               </div>
+    <!--       form_inner-->
+           </div>
+    <!--       container-->
+       </div>
+    <!--   Form-->
+
+    <!--     Blog-->
+          <div class="procedures">
+           <div class="container">
+              <div class="procedures_inner">
+                  <h2>Latest From Blog</h2>
+                  <div class="procedures_text">To doesn't his appear replenish together called he of mad place won't wherein blessed second every wherein were meat kind wherein and martcin </div>
+
+                      <div class="procedures_block">
+
+                      <div class="procedures_item">
+                          <img src="images/post/1.jpg" alt="" class="procedures_img">
+                          <h3 class="procedures_title">Massage Therapy</h3>
+                          <p class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</p>
+                          <a class="btn btn_small btn_grey">Read more</a>
+                      </div>
+                      <div class="procedures_item">
+                          <img src="images/post/2.jpg" alt="" class="procedures_img">
+                          <h3 class="procedures_title">Beauty Care</h3>
+                          <div class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</div>
+                          <button class="btn btn_small btn_grey">Read more</button>
+                      </div>
+                      <div class="procedures_item">
+                          <img src="images/post/3.jpg" alt="" class="procedures_img">
+                          <h3 class="procedures_title">Executive Reflexology</h3>
+                          <div class="procedures_lighttext">Living winged said you darkness you're divide gathered and bring one seasons face great dr Waters firmament place which.</div>
+                          <button class="btn btn_small btn_grey">Read more</button>
+                      </div>
+
+                  </div>
+
+
+               </div>
+              </div>
+        </div>   
+<!--         Blog-->
+    <!--    Get in touch-->
+       <div class="feedback">
+           <div class="container feedback_inner">
+               <div class="feedback_inner">
+                   <div class="centered_block">    
+                       <h2>Get In Touch</h2>
+                       <div class="procedures_text">To doesn't his appear replenish together called he of mad place won't wherein blessed second every wherein were meat kind wherein and martcin </div>
+                   </div>
+                   <div class="columns">
+                       <div class="contacts">
+                          <p class="contacts_item"> 
+                              848 E 28th ST, BROOKLYN<br>
+    NEW YORK, USA
+                          </p>
+                           <div class="contacts_item">
+                              <a href="mailto:example@leospa.com">example@leospa.com</a> 
+                           </div>
+                           <div class="contacts_item">
+                               <a href="tel:+02 365 2365 3265 (02)">+02 365 2365 3265 (02)</a><br>
+                               <a href="tel:+01 365 2365 3265 (04)">+01 365 2365 3265 (04)</a>
+                           </div>
+                       </div>
+                       <div class="form_block_2">
+                       <form action="#" method="post">
+                         <div>
+                                   <input type="text" name="name" placeholder="First name">
+                                   <input type="email" name="email" placeholder="Email address">
+                                   <textarea name="comment" cols="30" rows="10">Write a comment</textarea>
+
+                                   <button class="btn btn_round btn_submit" type="submit">Submit Now</button>
+                           </div>
+                        </form>
+                       </div>
+    <!--                   Form block-->
+                   </div>
+    <!--               Columns-->
+               </div>
+    <!--           Feedback inner-->
+           </div>
+    <!--       Container-->
+       </div>
+    <!--   Feedback-->
+       
+<!--      <script src="jquery-2.2.4.min"></script>-->
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!--      <script src="jquery.fancybox.min.js"></script>-->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      <script src="main.js"></script>
+      
+    
+   </main>
+   
+   <footer>
+      <img class="footer_logo" src="images/logo.png" alt="">
+      <div class="footer_link_block">
+          <a class="footer_link popup-demo">Home
+          </a>
+          <a class="footer_link popup-demo">About
+          </a>
+          <a class="footer_link popup-demo">Feature
+          </a>
+          <a class="footer_link popup-demo">Services
+          </a>
+          <a class="footer_link popup-demo">Contact
+          </a>
+      </div>
+      
+      <div class="social">
+                                <a class="social_item" href="#" target="_blank">
+                                    <svg class="social_icon">
+                                        <use xlink:href="#facebook"></use> 
+                                    </svg>
+                                </a>
+                                <a class="social_item" href="#" target="_blank">
+                                    <svg class="social_icon">
+                                        <use xlink:href="#twitter"></use> 
+                                    </svg>
+                                </a>
+                                
+                                <a class="social_item" href="#" target="_blank">
+                                    <svg class="social_icon">
+                                        <use xlink:href="#google-plus"></use> 
+                                    </svg>
+                                </a>
+                                   
+                                <a class="social_item" href="#" target="_blank">
+                                    <svg class="social_icon">
+                                        <use xlink:href="#instagram"></use> 
+                                    </svg>
+                                </a>
+                                
+     </div>            
+<!--     social-->
+     
+     <p class="footer_text">© COPYRIGHT 2019 <a class="footer_brightlink">themeies.com.</a> ALL RIGHTS RESERVED.
+     </p>
+       
+   </footer>
+    
+</body>
+</html>
