@@ -99,17 +99,18 @@ ul {
     
 }
 
-.nav a, .nav--mobile a{
+.nav a, .nav--mobile a, .footer_link{
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     color: #263a41;
     text-transform: uppercase; 
+    cursor: pointer;
 }
 
 
 
-.nav a:hover, a:active, .nav--mobile a:hover, a:active {
+.nav a:hover, a:active, .nav--mobile a:hover, a:active, .footer_link:hover {
     color: #ff817e;
     text-decoration: underline;
 }
